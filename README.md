@@ -47,8 +47,12 @@ This will execute the main program and display output.
 
 ```
 python-basics/
-├── main.py              # Main entry point
+├── gui-app
+├── hello-world
 ├── pyproject.toml       # Project configuration
+├── .python-version      # Python version config file
+├── uv.lock              # Project dependencies
+├── .gitignore           # Ignored repositories and files
 └── README.md            # This file
 ```
 
