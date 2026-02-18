@@ -10,4 +10,3 @@ elif age >= old:
     print("you are old")
 else:
     print("you are not adult")
-
