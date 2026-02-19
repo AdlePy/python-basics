@@ -86,4 +86,4 @@ dict_comprehension = {char: ord(char) for char in "askar"}
 print("dict comprehension:", dict_comprehension)
 
 set_comprehension = {char for char in "erlanuly"}
-print("set comprehension:",  set_comprehension)
+print("set comprehension:", set_comprehension)
