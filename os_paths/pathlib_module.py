@@ -9,12 +9,15 @@ def demo_cwd():
     for path in cwd.iterdir():
         print(f"{path.name}, {path.is_dir()}, {path.is_file()}")
 
+
 def demo_home():
     print(f"home directory: {Path.home()}")
+
 
 def demo_check_existence():
     users = Path("/Users")
     print(f"exists: {users.exists()}")
+
 
 def demo_paths():
     current_file = Path(__file__)
@@ -22,6 +25,7 @@ def demo_paths():
 
     base_dir = current_file.parent
     print(f"base directory: {base_dir}")
+
 
 def demo_build_paths():
     current_file = Path(__file__)
