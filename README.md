@@ -1,65 +1,89 @@
 # Python Basics
 
-A simple Python project demonstrating basic Python fundamentals.
-
-## Description
-
-This project provides a foundation for Python development with a clean project structure and basic entry point. It's designed to be used as a starting template for Python applications.
+Topic-based Python practice scripts covering core syntax, data structures, functions, file handling, paths, and basic PyQt6 GUI examples.
 
 ## Requirements
 
-- Python 3.14 or higher
+- Python 3.14+
+- Optional: `uv` for dependency management
 
-## Installation
+## Setup
 
-1. Clone or download this repository
-2. Navigate to the project directory:
-   ```bash
-   cd python-basics
-   ```
-
-3. (Optional) Create a virtual environment:
-   ```bash
-   python -m venv venv
-   ```
-
-   Activate it:
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-
-## Usage
-
-Run the main script:
+### Option 1: Use `uv` (recommended)
 
 ```bash
-python main.py
+uv sync
 ```
 
-This will execute the main program and display output.
+### Option 2: Use `venv` + `pip`
 
-## Project Structure
-
+```bash
+python -m venv .venv
 ```
+
+Activate the virtual environment:
+
+- Windows (PowerShell):
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+- macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install pyqt6
+```
+
+## Run Examples
+
+Each folder has an executable script. Run from the project root:
+
+```bash
+python hello-world/main.py
+python base-types/main.py
+python control-flows/main.py
+python cycles/main.py
+python data-structures/main.py
+python functions/main.py
+python functools_itertools/main_itertools.py
+python functools_itertools/main_functools.py
+python files/main_txt.py
+python files/main_json.py
+python files/main_csv.py
+python files/config_main.py
+python os_paths/os_module.py
+python os_paths/pathlib_module.py
+python gui-app/main.py
+python gui-app/timer.py
+```
+
+## Project Layout
+
+```text
 python-basics/
-├── gui-app
-├── hello-world
-├── pyproject.toml       # Project configuration
-├── .python-version      # Python version config file
-├── uv.lock              # Project dependencies
-├── .gitignore           # Ignored repositories and files
-└── README.md            # This file
+|-- hello-world/            # first hello world script
+|-- base-types/             # numeric, string, bool basics
+|-- control-flows/          # if / elif / else examples
+|-- cycles/                 # for/while loops, break/continue
+|-- data-structures/        # tuple, list, dict, set, comprehensions
+|-- functions/              # function args, *args, **kwargs, lambda/map/filter
+|-- functools_itertools/    # reduce, lru_cache, partial, itertools tools
+|-- files/                  # txt/json/csv/configparser read-write demos
+|-- os_paths/               # os and pathlib path/file operations
+|-- gui-app/                # PyQt6 hello window and timer app
+|-- pyproject.toml
+|-- uv.lock
+`-- README.md
 ```
 
-## Contributing
+## Notes
 
-Feel free to fork this repository and submit pull requests with improvements.
-
-## License
-
-This project is open source. See the repository for license details.
+- Some scripts write to local sample files (`files/` and `os_paths/file.txt`).
+- `gui-app` examples require `PyQt6`.
