@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+
+
 # class creation through type metaclass
 def echo_bar(self):
     print(f"foobar value: {self.foobar}")
@@ -13,6 +16,7 @@ foo = Foo()
 print(foo)
 foo.echo_bar()
 
+
 # metaclass creation
 class MyMetaclass(type):
     def __new__(cls, name, bases, dct, *args, **kwargs):
@@ -21,7 +25,8 @@ class MyMetaclass(type):
         print(f"with attrs: {dct}")
         new_class = super().__new__(cls, name, bases, dct, *args, **kwargs)
         return new_class
-    
+
+
 Bar = MyMetaclass("Bar", (), {"spam": "eggs"})
 print(Bar)
 print(type(Bar))
@@ -37,12 +42,13 @@ print(type(Zoo))
 
 
 # abstract class
-from abc import ABC, abstractmethod
+
 
 class FileManagerABC(ABC):
     @abstractmethod
     def read_file(self):
         pass
+
 
 class FileManager(FileManagerABC):
     def __init__(self, filename):
