@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime
 
+
 class Point(BaseModel):
     x: int
     y: int
@@ -19,9 +20,11 @@ def demo_point():
     p = Point(x=1, y=2)
     print(p)
 
+
 def demo_user():
     user = User(id=1, age=20)
     print(user)
+
 
 def main():
     # demo_point()
