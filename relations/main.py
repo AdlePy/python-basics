@@ -56,6 +56,7 @@ def create_heroes():
         print("Created hero:", hero_rusty_man)
         print("Created hero:", hero_spider_boy)
 
+
 def select_heroes():
     with Session(engine) as session:
         statement = select(Hero, Team).join(Team).where(Team.name == "Preventers")
@@ -63,8 +64,10 @@ def select_heroes():
         for hero, team in results:
             print("Preventer Hero:", hero, "Team:", team)
 
+
 def main():
     create_db_and_tables()
+
 
 if __name__ == "__main__":
     main()
